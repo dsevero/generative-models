@@ -10,3 +10,10 @@ bin/gh-md-toc:
 toc:
 	./bin/gh-md-toc --insert README.md
 	rm -f README.md.orig.* README.md.toc.*
+
+README.md: toc
+	docker run \
+		--volume "`pwd`:/data" \
+		--user `id -u`:`id -g` \
+		pandoc/latex tex/README.md \
+		-o README.md -t gfm --bibliography=tex/references.bib
