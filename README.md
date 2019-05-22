@@ -26,16 +26,26 @@ Repository for self-teaching of Generative Models and its applications.
   commit = {master}
 }
 ```
+# Watchables
+## Generative Adversarial Networks (GANs)
+> 
 
-# Readables
+
+# Readables and Watchables
 
 ## Introductory
 > https://openai.com/blog/generative-models/
+
+> [Stanford - Lecture 13 | Generative Models](https://www.youtube.com/watch?v=5WoItGTWV54)
 
 ## Generative Adversarial Networks (GANs)
 > [Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). **Generative adversarial nets.** In Advances in neural information processing systems (pp. 2672-2680).](https://arxiv.org/abs/1406.2661)
 
 > [Goodfellow, I. (2016). **NIPS 2016 tutorial: Generative adversarial networks.** arXiv preprint arXiv:1701.00160.](https://arxiv.org/abs/1701.00160)
+
+> [Ian Goodfellow: Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
+
+> [Introduction to GANs, NIPS 2016 | Ian Goodfellow, OpenAI](https://www.youtube.com/watch?v=9JpdAg6uMXs)
 
 ## Applications
 ### Bioinformatics
