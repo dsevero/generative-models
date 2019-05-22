@@ -9,6 +9,7 @@ Repository for self-teaching of Generative Models and its applications.
       * [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
       * [Applications](#applications)
          * [Bioinformatics](#bioinformatics)
+         * [Healthcare](#healthcare)
 
 <!-- Added by: severo, at: Wed May 22 04:00:39 -03 2019 -->
 
