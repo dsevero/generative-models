@@ -26,10 +26,6 @@ Repository for self-teaching of Generative Models and its applications.
   commit = {master}
 }
 ```
-# Watchables
-## Generative Adversarial Networks (GANs)
-> 
-
 
 # Readables and Watchables
 
