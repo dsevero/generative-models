@@ -2,6 +2,17 @@
 
 Repository for self-teaching of Generative Models and its applications.
 <!--ts-->
+   * [Generative Models](#generative-models)
+   * [How to reference this repo.](#how-to-reference-this-repo)
+   * [Readables and Watchables](#readables-and-watchables)
+      * [Introductory](#introductory)
+      * [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
+      * [Applications](#applications)
+         * [Bioinformatics](#bioinformatics)
+         * [Healthcare](#healthcare)
+         * [Reinforcement Learning](#reinforcement-learning)
+
+<!-- Added by: severo, at: Wed May 22 19:15:20 -03 2019 -->
 
 <!--te-->
 
