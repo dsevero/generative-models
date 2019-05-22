@@ -28,7 +28,7 @@ Repository for self-teaching of Generative Models and its applications.
 ## Generative Adversarial Networks (GANs)
 > [@goodfellow2014generative]
 
-> [Goodfellow, I. (2016). **NIPS 2016 tutorial: Generative adversarial networks.** arXiv preprint arXiv:1701.00160.](https://arxiv.org/abs/1701.00160)
+> [@goodfellow2016nips]
 
 > [Ian Goodfellow: Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
 
