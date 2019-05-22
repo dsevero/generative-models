@@ -12,7 +12,7 @@ Repository for self-teaching of Generative Models and its applications.
          * [Healthcare](#healthcare)
          * [Reinforcement Learning](#reinforcement-learning)
 
-<!-- Added by: severo, at: Wed May 22 19:15:20 -03 2019 -->
+<!-- Added by: severo, at: Wed May 22 19:18:52 -03 2019 -->
 
 <!--te-->
 
@@ -41,9 +41,7 @@ Repository for self-teaching of Generative Models and its applications.
 
 > (Goodfellow et al. 2014)
 
-> [Goodfellow, I. (2016). **NIPS 2016 tutorial: Generative adversarial
-> networks.** arXiv preprint
-> arXiv:1701.00160.](https://arxiv.org/abs/1701.00160)
+> (Goodfellow 2016)
 
 > [Ian Goodfellow: Generative Adversarial Networks (NIPS 2016
 > tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
@@ -74,6 +72,13 @@ Repository for self-teaching of Generative Models and its applications.
 > Intelligence.](https://arxiv.org/abs/1609.05473)
 
 <div id="refs" class="references">
+
+<div id="ref-goodfellow2016nips">
+
+Goodfellow, Ian. 2016. “NIPS 2016 Tutorial: Generative Adversarial
+Networks.” <http://arxiv.org/abs/1701.00160>.
+
+</div>
 
 <div id="ref-goodfellow2014generative">
 
