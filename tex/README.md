@@ -1,1 +1,1 @@
-Hope this works \[\@goodfellow2014generative\]
+Hope this works [@goodfellow2014generative]
