@@ -6,10 +6,11 @@ Repository for self-teaching of Generative Models and its applications.
    * [How to reference this repo.](#how-to-reference-this-repo)
    * [Readables](#readables)
       * [Introductory](#introductory)
-      * [Aplications](#aplications)
+      * [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
+      * [Applications](#applications)
          * [Bioinformatics](#bioinformatics)
 
-<!-- Added by: severo, at: Wed May 22 03:31:53 -03 2019 -->
+<!-- Added by: severo, at: Wed May 22 03:35:47 -03 2019 -->
 
 <!--te-->
 
