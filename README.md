@@ -46,3 +46,6 @@ Repository for self-teaching of Generative Models and its applications.
 ## Applications
 ### Bioinformatics
 > [Killoran, N., Lee, L. J., Delong, A., Duvenaud, D., & Frey, B. J. (2017). **Generating and designing DNA with deep generative models.** arXiv preprint arXiv:1712.06148.](https://arxiv.org/abs/1712.06148)
+
+### Healthcare
+> [Choi, E., Biswal, S., Malin, B., Duke, J., Stewart, W. F., & Sun, J. (2017). **Generating multi-label discrete patient records using generative adversarial networks.** arXiv preprint arXiv:1703.06490.](https://arxiv.org/pdf/1703.06490.pdf)
