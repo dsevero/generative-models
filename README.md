@@ -31,6 +31,8 @@ Repository for self-teaching of Generative Models and its applications.
 ## Introductory
 > https://openai.com/blog/generative-models/
 
+## Generative Adversarial Networks (GANs)
+> [Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). **Generative adversarial nets.** In Advances in neural information processing systems (pp. 2672-2680).](https://arxiv.org/abs/1406.2661)
 
 ## Applications
 ### Bioinformatics
