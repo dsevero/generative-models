@@ -6,7 +6,9 @@ Repository for self-teaching of Generative Models and its applications.
    * [How to reference this repo.](#how-to-reference-this-repo)
    * [Readables and Watchables](#readables-and-watchables)
       * [Introductory](#introductory)
-      * [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
+      * [Explicit Density](#explicit-density)
+      * [Implicit Density](#implicit-density)
+        * [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
       * [Applications](#applications)
          * [Bioinformatics](#bioinformatics)
          * [Healthcare](#healthcare)
@@ -35,7 +37,9 @@ Repository for self-teaching of Generative Models and its applications.
 
 > [Stanford - Lecture 13 | Generative Models](https://www.youtube.com/watch?v=5WoItGTWV54)
 
-## Generative Adversarial Networks (GANs)
+## Explicit Density
+## Implicit Density
+### Generative Adversarial Networks (GANs)
 > [Odena, **"Open Questions about Generative Adversarial Networks"**, Distill, 2019.](https://distill.pub/2019/gan-open-problems/)
 
 > [Salimans, T., Goodfellow, I., Zaremba, W., Cheung, V., Radford, A., & Chen, X. (2016). **Improved techniques for training gans.** In Advances in neural information processing systems (pp. 2234-2242).](https://arxiv.org/abs/1606.03498)
