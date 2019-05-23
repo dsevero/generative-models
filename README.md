@@ -36,6 +36,8 @@ Repository for self-teaching of Generative Models and its applications.
 > [Stanford - Lecture 13 | Generative Models](https://www.youtube.com/watch?v=5WoItGTWV54)
 
 ## Generative Adversarial Networks (GANs)
+> [Odena, **"Open Questions about Generative Adversarial Networks"**, Distill, 2019.](https://distill.pub/2019/gan-open-problems/)
+
 > [Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). **Generative adversarial nets.** In Advances in neural information processing systems (pp. 2672-2680).](https://arxiv.org/abs/1406.2661)
 
 > [Goodfellow, I. (2016). **NIPS 2016 tutorial: Generative adversarial networks.** arXiv preprint arXiv:1701.00160.](https://arxiv.org/abs/1701.00160)
