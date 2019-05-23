@@ -4,6 +4,7 @@ Repository for self-teaching of Generative Models and its applications.
 <!--ts-->
    * [Generative Models](#generative-models)
    * [How to reference this repo.](#how-to-reference-this-repo)
+   * [Courses](#courses)
    * [Readables and Watchables](#readables-and-watchables)
       * [Introductory](#introductory)
       * [Explicit Density](#explicit-density)
@@ -29,7 +30,8 @@ Repository for self-teaching of Generative Models and its applications.
   commit = {master}
 }
 ```
-
+# Courses
+> [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)
 # Readables and Watchables
 
 ## Introductory
