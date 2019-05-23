@@ -44,6 +44,8 @@ Repository for self-teaching of Generative Models and its applications.
 
 > [Goodfellow, I. (2016). **NIPS 2016 tutorial: Generative adversarial networks.** arXiv preprint arXiv:1701.00160.](https://arxiv.org/abs/1701.00160)
 
+> [Chen, X., Duan, Y., Houthooft, R., Schulman, J., Sutskever, I., & Abbeel, P. (2016). **Infogan: Interpretable representation learning by information maximizing generative adversarial nets.** In Advances in neural information processing systems (pp. 2172-2180).](https://arxiv.org/abs/1606.03657)
+
 > [Ian Goodfellow: Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
 
 > [Introduction to GANs, NIPS 2016 | Ian Goodfellow, OpenAI](https://www.youtube.com/watch?v=9JpdAg6uMXs)
