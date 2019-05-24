@@ -9,13 +9,17 @@ Repository for self-teaching of Generative Models and its applications.
       * [Introductory](#introductory)
       * [Explicit Density](#explicit-density)
       * [Implicit Density](#implicit-density)
-        * [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
+         * [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
+            * [2019](#2019)
+            * [2016](#2016)
+            * [2014](#2014)
       * [Applications](#applications)
          * [Bioinformatics](#bioinformatics)
          * [Healthcare](#healthcare)
+         * [Reinforcement Learning](#reinforcement-learning)
    * [Related repos.](#related-repos)
 
-<!-- Added by: severo, at: Wed May 22 04:00:39 -03 2019 -->
+<!-- Added by: severo, at: Fri May 24 01:19:58 -03 2019 -->
 
 <!--te-->
 
