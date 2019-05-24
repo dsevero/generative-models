@@ -1,1 +1,1 @@
-<p align="center"><img alt="$$\frac{a}{b}$$" src="https://rawgit.com/in	git@github.com:dsevero/generative-models/master/svgs/69ca284ae0a59df3dfe96eeca00cb638.svg" align="middle" width="8.689147499999999pt" height="29.474114999999998pt"/></p>
+<p align="center"><img alt="$$\frac{a}{b}$$" src="svgs/69ca284ae0a59df3dfe96eeca00cb638.svg" align="middle" width="8.689147499999999pt" height="29.474114999999998pt"/></p>
