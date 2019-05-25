@@ -7,14 +7,22 @@ bin/gh-md-toc:
 	chmod a+x gh-md-toc
 	mv gh-md-toc bin/
 
-toc:
-	./bin/gh-md-toc --insert README.md
-	rm -f README.md.orig.* README.md.toc.*
-
-README.md:
+README.md: tex/README.tex tex/references.bib
 	docker run \
 		--volume "`pwd`:/data" \
 		--user `id -u`:`id -g` \
-		pandoc/latex tex/README.md \
-		-o README.md -t gfm --bibliography=tex/references.bib
-	$(MAKE) toc
+		pandoc/latex \
+		--atx-headers \
+		--webtex=https://latex.codecogs.com/png.latex? \
+		-s \
+		-t gfm \
+		--toc \
+		-o README.md \
+		tex/README.tex
+
+README.pdf: tex/README.tex tex/references.bib
+	docker run \
+		--volume "`pwd`:/data" \
+		--user `id -u`:`id -g` \
+		pandoc/latex tex/README.tex \
+		-o README.pdf -t latex
