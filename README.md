@@ -74,7 +74,11 @@ Repository for self-teaching of Generative Models and its applications.
 ### Reinforcement Learning
 > [Yu, L., Zhang, W., Wang, J., & Yu, Y. (2017, February). **Seqgan: Sequence generative adversarial nets with policy gradient.** In Thirty-First AAAI Conference on Artificial Intelligence.](https://arxiv.org/abs/1609.05473)
 
-# Related repos.
+# Related repos & tutorials.
 > [The GAN Zoo](https://github.com/hindupuravinash/the-gan-zoo)
 
 > [How to Train a GAN? Tips and tricks to make GANs work](https://github.com/soumith/ganhacks)
+
+> https://ceit.aut.ac.ir/~khalooei/tutorials/gan/
+
+> [CVPR 2018 Tutorial on GANs](https://sites.google.com/view/cvpr2018tutorialongans/)
