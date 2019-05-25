@@ -22,7 +22,11 @@
 
 ## Implicit Density
 
+implicit density stuff
+
 ## Applications
+
+applications and stuff
 
 ### Bioinformatics
 
