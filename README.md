@@ -2,6 +2,8 @@
   - [Readables and Watchables](#readables-and-watchables)
       - [Introductory](#introductory)
       - [Implicit Density](#implicit-density)
+      - [Applications](#applications)
+          - [Bioinformatics](#bioinformatics)
 
 # Courses
 
@@ -20,6 +22,10 @@
 
 ## Implicit Density
 
+## Applications
+
+### Bioinformatics
+
 <div id="refs" class="references">
 
 <div id="ref-goodfellow2014generative">
@@ -28,6 +34,14 @@ Goodfellow, Ian, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David
 Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio. 2014.
 “Generative Adversarial Nets.” In *Advances in Neural Information
 Processing Systems*, 2672–80.
+
+</div>
+
+<div id="ref-killoran2017generating">
+
+Killoran, Nathan, Leo J Lee, Andrew Delong, David Duvenaud, and Brendan
+J Frey. 2017. “Generating and Designing Dna with Deep Generative
+Models.” *arXiv Preprint arXiv:1712.06148*.
 
 </div>
 

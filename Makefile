@@ -7,12 +7,12 @@ bin/gh-md-toc:
 	chmod a+x gh-md-toc
 	mv gh-md-toc bin/
 
-README.md: tex/README.tex tex/references.bib
+README.md: tex/README.tex tex/README.bib
 	docker run \
 		--volume "`pwd`:/data" \
 		--user `id -u`:`id -g` \
 		pandoc/latex \
-		--bibliography=tex/references.bib \
+		--bibliography=tex/README.bib \
 		--atx-headers \
 		--webtex=https://latex.codecogs.com/png.latex? \
 		--standalone \
@@ -22,13 +22,13 @@ README.md: tex/README.tex tex/references.bib
 		tex/README.tex
 	cat README.md
 
-build/README.pdf: tex/README.tex tex/references.bib
+build/README.pdf: tex/README.tex tex/README.bib
 	mkdir -p build/
 	docker run \
 		--volume "`pwd`:/data" \
 		--user `id -u`:`id -g` \
 		pandoc/latex \
-		--bibliography=tex/references.bib \
+		--bibliography=tex/README.bib \
 		--to latex \
 		--toc \
 		--output build/README.pdf \
