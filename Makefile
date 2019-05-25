@@ -1,5 +1,5 @@
 .DELETE_ON_ERROR:
-.PHONY: toc README.md
+.PHONY: toc README.md build/README.pdf
 
 bin/gh-md-toc:
 	mkdir -p bin
@@ -12,6 +12,7 @@ README.md: tex/README.tex tex/references.bib
 		--volume "`pwd`:/data" \
 		--user `id -u`:`id -g` \
 		pandoc/latex \
+		--bibliography=tex/references.bib \
 		--atx-headers \
 		--webtex=https://latex.codecogs.com/png.latex? \
 		--standalone \
@@ -19,6 +20,7 @@ README.md: tex/README.tex tex/references.bib
 		--toc \
 		--output README.md \
 		tex/README.tex
+	cat README.md
 
 build/README.pdf: tex/README.tex tex/references.bib
 	mkdir -p build/
@@ -26,7 +28,9 @@ build/README.pdf: tex/README.tex tex/references.bib
 		--volume "`pwd`:/data" \
 		--user `id -u`:`id -g` \
 		pandoc/latex \
+		--bibliography=tex/references.bib \
 		--to latex \
 		--toc \
 		--output build/README.pdf \
 		tex/README.tex
+	xdg-open build/README.pdf
