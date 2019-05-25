@@ -14,15 +14,19 @@ README.md: tex/README.tex tex/references.bib
 		pandoc/latex \
 		--atx-headers \
 		--webtex=https://latex.codecogs.com/png.latex? \
-		-s \
-		-t gfm \
+		--standalone \
+		--to gfm \
 		--toc \
-		-o README.md \
+		--output README.md \
 		tex/README.tex
 
-README.pdf: tex/README.tex tex/references.bib
+build/README.pdf: tex/README.tex tex/references.bib
+	mkdir -p build/
 	docker run \
 		--volume "`pwd`:/data" \
 		--user `id -u`:`id -g` \
-		pandoc/latex tex/README.tex \
-		-o README.pdf -t latex
+		pandoc/latex \
+		--to latex \
+		--toc \
+		--output build/README.pdf \
+		tex/README.tex
