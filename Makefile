@@ -1,17 +1,11 @@
 .DELETE_ON_ERROR:
-.PHONY: toc README.md build/README.pdf
 
-bin/gh-md-toc:
-	mkdir -p bin
-	wget https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc
-	chmod a+x gh-md-toc
-	mv gh-md-toc bin/
-
-README.md: tex/README.tex tex/README.bib
+README.md: tex/README.tex tex/README.bib build-image
 	docker run \
 		--volume "`pwd`:/data" \
 		--user `id -u`:`id -g` \
-		pandoc/latex \
+		dsevero/generative-models \
+		--verbose \
 		--bibliography=tex/README.bib \
 		--atx-headers \
 		--webtex=https://latex.codecogs.com/png.latex? \
@@ -22,15 +16,20 @@ README.md: tex/README.tex tex/README.bib
 		tex/README.tex
 	cat README.md
 
-build/README.pdf: tex/README.tex tex/README.bib
+README.pdf: tex/README.tex tex/README.bib build-image
 	mkdir -p build/
 	docker run \
 		--volume "`pwd`:/data" \
 		--user `id -u`:`id -g` \
-		pandoc/latex \
+		dsevero/generative-models \
+		--verbose \
 		--bibliography=tex/README.bib \
 		--to latex \
 		--toc \
-		--output build/README.pdf \
+		--output README.pdf \
 		tex/README.tex
-	xdg-open build/README.pdf
+	xdg-open README.pdf
+
+build-image: Dockerfile
+	docker build -t dsevero/generative-models .
+	touch build-image

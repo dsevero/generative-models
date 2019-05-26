@@ -1,11 +1,3 @@
-  - [Courses](#courses)
-  - [Readables and Watchables](#readables-and-watchables)
-      - [Introductory](#introductory)
-      - [Implicit Density](#implicit-density)
-      - [Applications](#applications)
-          - [Bioinformatics](#bioinformatics)
-  - [References](#references)
-
 # Courses
 
 1.  [CS231n: Convolutional Neural Networks for Visual
