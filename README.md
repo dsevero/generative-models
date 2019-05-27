@@ -69,7 +69,10 @@ Repository for self-teaching of Generative Models and its applications.
 > [Killoran, N., Lee, L. J., Delong, A., Duvenaud, D., & Frey, B. J. (2017). **Generating and designing DNA with deep generative models.** arXiv preprint arXiv:1712.06148.](https://arxiv.org/abs/1712.06148)
 
 ### Healthcare
+> [Guan, J., Li, R., Yu, S., & Zhang, X. (2018, December). **Generation of Synthetic Electronic Medical Record Text.** In 2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM) (pp. 374-380). IEEE.](https://arxiv.org/abs/1812.02793)
+
 > [Choi, E., Biswal, S., Malin, B., Duke, J., Stewart, W. F., & Sun, J. (2017). **Generating multi-label discrete patient records using generative adversarial networks.** arXiv preprint arXiv:1703.06490.](https://arxiv.org/pdf/1703.06490v3.pdf)
+
 
 ### Reinforcement Learning
 > [Yu, L., Zhang, W., Wang, J., & Yu, Y. (2017, February). **Seqgan: Sequence generative adversarial nets with policy gradient.** In Thirty-First AAAI Conference on Artificial Intelligence.](https://arxiv.org/abs/1609.05473)
