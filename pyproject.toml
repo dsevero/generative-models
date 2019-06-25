@@ -5,8 +5,10 @@ description = ""
 authors = ["dsevero <danielsouzasevero@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
-readme2tex = {git = "git+ssh://git@github.com/leegao/readme2tex.git"}
+python = "^3.7"
+tensorflow = "=2.0.0-beta1"
+jupyter = "^1.0"
+black = {version = "^18.3-alpha.0",allows-prereleases = true}
 
 [tool.poetry.dev-dependencies]
 
