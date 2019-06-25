@@ -1,5 +1,5 @@
 .DELETE_ON_ERROR:
-.PHONY: toc README.md
+.PHONY: README.md
 
 bin/gh-md-toc:
 	mkdir -p bin
@@ -7,14 +7,6 @@ bin/gh-md-toc:
 	chmod a+x gh-md-toc
 	mv gh-md-toc bin/
 
-toc:
+README.md: bin/gh-md-toc
 	./bin/gh-md-toc --insert README.md
 	rm -f README.md.orig.* README.md.toc.*
-
-README.md:
-	docker run \
-		--volume "`pwd`:/data" \
-		--user `id -u`:`id -g` \
-		pandoc/latex tex/README.md \
-		-o README.md -t gfm --bibliography=tex/references.bib
-	$(MAKE) toc
