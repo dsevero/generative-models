@@ -16,6 +16,7 @@ pandas = "^0.24.2"
 gpustats = "^0.0.1"
 tensorflow-gpu = "^1.14"
 mlflow = "^1.0"
+kaggle = "^1.5"
 
 [tool.poetry.dev-dependencies]
 
