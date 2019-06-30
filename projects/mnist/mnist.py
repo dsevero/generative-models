@@ -99,7 +99,6 @@ def main(**kwargs):
     )
 
     with mlflow.start_run() as run:
-        #        log_model(model, "model")
         mlflow.log_artifact("summary.txt", "model")
         for metric, values in history.history.items():
             for epoch, value in enumerate(values):
