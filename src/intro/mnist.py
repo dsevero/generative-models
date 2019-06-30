@@ -1,5 +1,5 @@
 from keras.models import Sequential
-from keras.layers import Conv2D, MaxPooling2D, Dense, Activation, Flatten
+from keras.layers import Conv2D, MaxPooling2D, Dense, Activation, Flatten, BatchNormalization, Dropout
 from keras.datasets import mnist
 from keras import backend as K
 from IPython.display import display
@@ -30,7 +30,16 @@ model = Sequential([
            data_format='channels_first',
            input_shape=x_train[0].shape),
     MaxPooling2D(pool_size=(2, 2)),
+    Conv2D(filters=32, 
+           kernel_size=(3, 3), 
+           activation='relu',
+           data_format='channels_first',
+           input_shape=x_train[0].shape),
+    MaxPooling2D(pool_size=(2, 2)),
     Flatten(),
+    Dense(256, activation='relu'),
+    Dropout(0.5),
+    BatchNormalization(),
     Dense(10, activation='softmax')
 ])
 
@@ -44,6 +53,6 @@ model.summary()
 
 model.fit(x_train, y_train, 
           validation_data=(x_test, y_test),
-          batch_size=1_000, 
-          epochs=5, 
+          batch_size=512, 
+          epochs=100, 
           verbose=1);
