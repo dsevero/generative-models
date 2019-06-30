@@ -26,3 +26,8 @@ tensorboard:
 
 black:
 	poetry run black src --line-length 100
+
+install:
+	poetry run pip install --upgrade pip
+	poetry update -vv
+	$(MAKE) ipython-kernel
