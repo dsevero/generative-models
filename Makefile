@@ -25,7 +25,7 @@ tensorboard:
 	cat logs/nohup/tensorboard.log
 
 black:
-	poetry run black src --line-length 100
+	poetry run black projects --line-length 100
 
 install:
 	poetry run pip install --upgrade pip
