@@ -1,4 +1,4 @@
-name: MNIST
+name: MNIST-DenseCNN
 conda_env: conda.yaml
 
 entry_points:
@@ -8,4 +8,4 @@ entry_points:
       batch_size: {type: int, default: 256}
       dropout_rate: {type: float, default: 0.5}
       architecture: {type: string, default: "DenseCNN"}
-    command: "python mnist.py --batch-size {batch_size} --epochs {epochs} --dropout-rate {dropout_rate} --architecture {architecture}"
+    command: "python main.py --batch-size {batch_size} --epochs {epochs} --dropout-rate {dropout_rate} --architecture {architecture}"

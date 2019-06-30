@@ -1,4 +1,4 @@
-name: generative-models-mnist
+name: generative-models-MNIST
 channels:
   - defaults
   - anaconda
