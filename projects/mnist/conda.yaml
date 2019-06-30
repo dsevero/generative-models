@@ -1,0 +1,12 @@
+name: generative-models-mnist
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python==3.6
+  - tensorflow
+  - tensorflow-gpu
+  - keras
+  - pip
+  - pip:
+    - mlflow
