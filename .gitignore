@@ -2,3 +2,4 @@ bin/
 logs/
 nohup
 *.ipynb_checkpoint
+projects/*/summary.txt
