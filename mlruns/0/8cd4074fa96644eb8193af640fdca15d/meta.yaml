@@ -2,7 +2,7 @@ artifact_uri: file:///home/care3778/generative-models/mlruns/0/8cd4074fa96644eb8
 end_time: 1561886024639
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 name: ''
 run_id: 8cd4074fa96644eb8193af640fdca15d
 run_uuid: 8cd4074fa96644eb8193af640fdca15d

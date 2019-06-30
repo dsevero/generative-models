@@ -1,5 +1,5 @@
 bin/
 logs/
-nohup
+nohup.out
 *.ipynb_checkpoint
 projects/*/summary.txt
