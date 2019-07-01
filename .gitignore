@@ -4,3 +4,4 @@ nohup.out
 *.ipynb_checkpoint
 projects/*/summary.txt
 /experiments/*/data/
+/experiments/*/models/*/*.csv
