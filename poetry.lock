@@ -66,14 +66,6 @@ version = "0.1.0"
 
 [[package]]
 category = "main"
-description = "Backport of new features in Python's weakref module"
-name = "backports.weakref"
-optional = false
-python-versions = "*"
-version = "1.0.post1"
-
-[[package]]
-category = "main"
 description = "The uncompromising code formatter."
 name = "black"
 optional = false
@@ -213,14 +205,6 @@ name = "entrypoints"
 optional = false
 python-versions = ">=2.7"
 version = "0.3"
-
-[[package]]
-category = "main"
-description = "Python 3.4 Enum backported to 3.3, 3.2, 3.1, 2.7, 2.6, 2.5, and 2.4"
-name = "enum34"
-optional = false
-python-versions = "*"
-version = "1.1.6"
 
 [[package]]
 category = "main"
@@ -637,17 +621,6 @@ sqlparse = "*"
 
 [[package]]
 category = "main"
-description = "Rolling backport of unittest.mock for all Pythons"
-name = "mock"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "3.0.5"
-
-[package.dependencies]
-six = "*"
-
-[[package]]
-category = "main"
 description = "Converting Jupyter Notebooks"
 name = "nbconvert"
 optional = false
@@ -1035,10 +1008,10 @@ version = "0.8.3"
 [[package]]
 category = "main"
 description = "TensorBoard lets you watch Tensors Flow"
-name = "tensorboard"
+name = "tb-nightly"
 optional = false
 python-versions = ">= 2.7, != 3.0.*, != 3.1.*"
-version = "1.14.0"
+version = "1.14.0a20190603"
 
 [package.dependencies]
 absl-py = ">=0.4"
@@ -1060,35 +1033,24 @@ description = "TensorFlow is an open source machine learning framework for every
 name = "tensorflow"
 optional = false
 python-versions = "*"
-version = "1.14.0"
+version = "2.0.0b1"
 
 [package.dependencies]
 absl-py = ">=0.7.0"
 astor = ">=0.6.0"
-"backports.weakref" = ">=1.0rc1"
-enum34 = ">=1.1.6"
 gast = ">=0.2.0"
 google-pasta = ">=0.1.6"
 grpcio = ">=1.8.6"
 keras-applications = ">=1.0.6"
 keras-preprocessing = ">=1.0.5"
-mock = ">=2.0.0"
 numpy = ">=1.14.5,<2.0"
 protobuf = ">=3.6.1"
 six = ">=1.10.0"
-tensorboard = ">=1.14.0,<1.15.0"
-tensorflow-estimator = ">=1.14.0rc0,<1.15.0rc0"
+tb-nightly = ">=1.14.0a20190603,<1.14.0a20190604"
 termcolor = ">=1.1.0"
-wheel = "*"
+tf-estimator-nightly = ">=1.14.0.dev2019060501,<1.14.0.dev2019060502"
+wheel = ">=0.26"
 wrapt = ">=1.11.1"
-
-[[package]]
-category = "main"
-description = "TensorFlow Estimator."
-name = "tensorflow-estimator"
-optional = false
-python-versions = "*"
-version = "1.14.0"
 
 [[package]]
 category = "main"
@@ -1096,7 +1058,7 @@ description = "TensorFlow is an open source machine learning framework for every
 name = "tensorflow-gpu"
 optional = false
 python-versions = "*"
-version = "1.14.0"
+version = "2.0.0b1"
 
 [package.dependencies]
 absl-py = ">=0.7.0"
@@ -1109,9 +1071,9 @@ keras-preprocessing = ">=1.0.5"
 numpy = ">=1.14.5,<2.0"
 protobuf = ">=3.6.1"
 six = ">=1.10.0"
-tensorboard = ">=1.14.0,<1.15.0"
-tensorflow-estimator = ">=1.14.0rc0,<1.15.0rc0"
+tb-nightly = ">=1.14.0a20190603,<1.14.0a20190604"
 termcolor = ">=1.1.0"
+tf-estimator-nightly = ">=1.14.0.dev2019060501,<1.14.0.dev2019060502"
 wheel = ">=0.26"
 wrapt = ">=1.11.1"
 
@@ -1151,6 +1113,14 @@ name = "text-unidecode"
 optional = false
 python-versions = "*"
 version = "1.2"
+
+[[package]]
+category = "main"
+description = "TensorFlow Estimator."
+name = "tf-estimator-nightly"
+optional = false
+python-versions = "*"
+version = "1.14.0.dev2019060501"
 
 [[package]]
 category = "main"
@@ -1260,7 +1230,7 @@ python-versions = "*"
 version = "1.11.2"
 
 [metadata]
-content-hash = "8e6477e1bb53520c43b74b8ac4cdecb96b2e36273a1c9bc467377366af98ad85"
+content-hash = "f4e5bcb60e9c9d45fc479f495ac612337dfb3ea04de332614696d3eb141cdaf3"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1271,7 +1241,6 @@ appnope = ["5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0", "
 astor = ["0e41295809baf43ae8303350e031aff81ae52189b6f881f36d623fa8b2f1960e", "37a6eed8b371f1228db08234ed7f6cfdc7817a3ed3824797e20cbb11dc2a7862"]
 attrs = ["69c0dbf2ed392de1cb5ec704444b08a5ef81680a61cb899dc08127123af36a79", "f0b870f674851ecbfbbbd364d6b5cbdff9dcedbc7f3f5e18a6891057f21fe399"]
 backcall = ["38ecd85be2c1e78f77fd91700c76e14667dc21e2713b63876c0eb901196e01e4", "bbbf4b1e5cd2bdb08f915895b51081c041bac22394fdfcfdfbe9f14b77c08bf2"]
-"backports.weakref" = ["81bc9b51c0abc58edc76aefbbc68c62a787918ffe943a37947e162c3f8e19e82", "bc4170a29915f8b22c9e7c4939701859650f2eb84184aee80da329ac0b9825c2"]
 black = ["817243426042db1d36617910df579a54f1afd659adb96fc5032fcf4b36209739", "e030a9a28f542debc08acceb273f228ac422798e5215ba2a791a6ddeaaca22a5"]
 bleach = ["213336e49e102af26d9cde77dd2d0397afabc5a6bf2fed985dc35b5d1e285a16", "3fdf7f77adcf649c9911387df51254b813185e32b2c6619f690b593a617e19fa"]
 certifi = ["046832c04d4e752f37383b628bc601a7ea7211496b4638f6514d0e5b9acc4939", "945e3ba63a0b9f577b1395204e13c3a231f9bc0223888be653286534e5873695"]
@@ -1286,7 +1255,6 @@ decorator = ["86156361c50488b84a3f148056ea716ca587df2f0de1d34750d35c21312725de",
 defusedxml = ["6687150770438374ab581bb7a1b327a847dd9c5749e396102de3fad4e8a3ef93", "f684034d135af4c6cbb949b8a4d2ed61634515257a67299e5f940fbaa34377f5"]
 docker = ["acf51b5e3e0d056925c3b780067a6f753c915fffaa46c5f2d79eb0fc1cbe6a01", "cc5b2e94af6a2b1e1ed9d7dcbdc77eff56c36081757baf9ada6e878ea0213164"]
 entrypoints = ["589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19", "c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"]
-enum34 = ["2d81cbbe0e73112bdfe6ef8576f2238f2ba27dd0d55752a776c41d38b7da2850", "644837f692e5f550741432dd3f223bbb9852018674981b1664e5dc339387588a", "6bd0f6ad48ec2aa117d3d141940d484deccda84d4fcd884f5c3d93c23ecd8c79", "8ad8c4783bf61ded74527bffb48ed9b54166685e4230386a9ed9b1279e2df5b1"]
 flask = ["ad7c6d841e64296b962296c2c2dabc6543752985727af86a975072dea984b6f3", "e7d32475d1de5facaa55e3958bc4ec66d3762076b074296aa50ef8fdc5b9df61"]
 gast = ["fe939df4583692f0512161ec1c880e0a10e71e6a232da045ab8edd3756fbadf0"]
 gitdb2 = ["83361131a1836661a155172932a13c08bda2db3674e4caa32368aa6eb02f38c2", "e3a0141c5f2a3f635c7209d56c496ebe1ad35da82fe4d3ec4aaa36278d70648a"]
@@ -1320,7 +1288,6 @@ markupsafe = ["00bc623926325b26bb9605ae9eae8a215691f33cae5df11ca5424f06f2d1f473"
 matplotlib = ["08d9bc2e2acef42965256acd5015dc2c899cbd53e01bf4214c5510c7ea0efd2d", "1e0213f87cc0076f7b0c4c251d7e23601e2419cd98691df79edb95517ba06f0c", "1f31053f660df5f0310118d7f5bd1e8025170e9773f0bebe8fec486d0926adf6", "399bf6352633aeeb45ca55c6c943fa2738022fb17ae498c32a142ced0b41528d", "409a5894efb810d630d2512449c7a4394de9a4d15fc6394e26a409b17d9cc18c", "5c5ef5cf1bc8f483123102e2615644937af7d4c01d100acc72bf74a044a78717", "d0052be5cdfa27018bb08194b8812c47cb985d60eb682e1809c76e9600839516", "e7d6620d145ca9f6c3e88248e5734b6fda430e75e70755b887e48f8e9bc1de2a", "f3d8b6bccc577e4e5ecbd58fdd63cacb8e58f0ed1e97616a7f7a7baaf4b8d036"]
 mistune = ["59a3429db53c50b5c6bcc8a07f8848cb00d7dc8bdb431a4ab41920d201d4756e", "88a1051873018da288eee8538d476dffe1262495144b33ecb586c4ab266bb8d4"]
 mlflow = ["0f2f116a377b9da538642eaf688caa0a7166ee1ede30c8734830eb9e789574b4", "2c1d1c4e99793fee7c1c8b0e63f89784eb85840611088c2a34df03a549ce362d"]
-mock = ["83657d894c90d5681d62155c82bda9c1187827525880eda8ff5df4ec813437c3", "d157e52d4e5b938c550f39eb2fd15610db062441a9c2747d3dbfa9298211d0f8"]
 nbconvert = ["138381baa41d83584459b5cfecfc38c800ccf1f37d9ddd0bd440783346a4c39c", "4a978548d8383f6b2cfca4a3b0543afb77bc7cb5a96e8b424337ab58c12da9bc"]
 nbformat = ["b9a0dbdbd45bb034f4f8893cafd6f652ea08c8c1674ba83f2dc55d3955743b0b", "f7494ef0df60766b7cabe0a3651556345a963b74dbc16bc7c18479041170d402"]
 notebook = ["573e0ae650c5d76b18b6e564ba6d21bf321d00847de1d215b418acb64f056eb8", "f64fa6624d2323fbef6210a621817d6505a45d0d4a9367f1843b20a38a4666ee"]
@@ -1358,14 +1325,14 @@ smmap2 = ["0555a7bf4df71d1ef4218e4807bbf9b201f910174e6e08af2e138d4e517b4dde", "2
 sqlalchemy = ["c30925d60af95443458ebd7525daf791f55762b106049ae71e18f8dd58084c2f"]
 sqlparse = ["40afe6b8d4b1117e7dff5504d7a8ce07d9a1b15aeeade8a2d10f130a834f8177", "7c3dca29c022744e95b547e867cee89f4fce4373f3549ccd8797d8eb52cdb873"]
 tabulate = ["8af07a39377cee1103a5c8b3330a421c2d99b9141e9cc5ddd2e3263fea416943"]
-tensorboard = ["50e0b1bdcd488dbe39fd9416976e089b2ff4df18d9f1fab47abf4c498209c3fc", "c35ba681a52d4922be6b225623cf77285033e7e4e68bac5c1d5490e47d129bb2"]
-tensorflow = ["0a3784c6ab223b85a87ba6b752d2e6dc97b9345c078172d9b0bb90f3e448a320", "0a95ab659de39748c418f342fd09bc444a21a7d66f4501593cf7ff6de3c603b1", "2fc989a5d3be9f3dc96c20deaa3d5cc66d2bf76fe069c202c2914a7f4b5a9a35", "4008a56940d23345e52ac4885fb4782604eb02574c2d95f3946f5b6baf0e1276", "4643fcb6aa7bf9261620efe332f821ccdb63422ed5df33479e3c9592659cd64e", "46fc216db780b1a7b7a28cf6536d6ec0a171ef2fa546a24934ffe077c734c891", "5a9555eee142324a1cc3d6a5a9c0c8154ded8d013bf18cb459bc375e5d365191", "5ce034dba1db7cd829af2bf092c48dce96bb3da3e89223d7cb50f3eac2ddc19f", "7dfefd6fc79fed477c2c550cb79f766fb40533e907e4efbfabc81339b45551a4", "a3851118d2cc5e9e697503753c2d247dca0e98d5a85b5ea091103f27d9e57a38", "a4f154fa98cde5974117e05af444e0bed84cf431b8129c78a2de03a1ff7201c9", "c77888375ef02a5e7e55f81572db1bfa41e6f6597ae297e7bdafb22bf633f79e", "d982a6fef251ec1358129213385ec027f87ee72246dffe1136ca6109def209f7", "e20b5d81b07798db5054802405758fb685367772f1d602d359ba60baa34b6b46", "e84f2c8c7f23ad546076b1e73cec85706da19910b9a89c29cba3b64e297b2eb0"]
-tensorflow-estimator = ["ca073f66063407a091d610ec1b22e39ea30248710198cc6f13769320bdbe3992"]
-tensorflow-gpu = ["043dc9b66500feceb9d4857940ff50cc7ed40b588d47c129d57625191a6ae077", "1b7ce8d3b22112f5d3b0389e7bd13761ce6a801f1899af7858b6bd95563fc1d6", "45e0213a7681feb7bfa19208d640794f53f7b5c30c1061e5be43a7f938edbf6e", "6c2621ceb0a3b59606a06c5193f967243a6ebbd41c001d81231e77fc66266a7e", "71ab378b22ffb457cffeb01d48a31ba00cf90a8cea1ab18b84bd0efe0f207d7d", "8563b56388f6e9efdca10fcea2c9f6f03b3e4c65cd22fa5a93d73caf5e483d78", "a2528c9ab069599b7c6f9f2f1f751bcb5467b49a4960580a225d7b612dba396e", "bd8efeb415dcc353d501510ed3bbe1c4b996e5c05797b444455d86bfee7bf10e", "ed8db7cbf95f56fff7e7baa73a0912a63a46887b38ac19bdd75941e818baf37a"]
+tb-nightly = ["60c159328310a56de128e89660dd3bd019583a5bb8e9c40d16e29d374ecaa7ce", "8dc02a7ccc1ddbf6b471874aa378500fd888b442b0de08daa10ac0bad4971007"]
+tensorflow = ["09cb5167ddb1f533e9e8b465cba33f7eb66e5270c938bde5173f69a3c29900d8", "38e6724adfd589e8d39bfd4e6f8b3a4628a5c72a9f26771b2a454d44b1d34968", "3eb0bfd74e562da01943fe4a0272c5a4392757f280f8629b37a55953940b2422", "4a6e9a2aad0b3dda089b4a8c5ed4e2eeddf862f1005d61d0dd0863bed15b1968", "5851cb7f7fdab2957fc7085327be26eec8686afdebbac04b7f703d21244c8c9e", "74d64a4f6387f0efeda0f613ffa46e1d14426910abe4aa14b774b41ce8d43cd3", "8e9a5c12620b5c46a24cdb5c0256dfa77c17b486011a600d74540e068ad6774b", "93c9cfc2cf144e1240aaffed3f952ab6ee0e2e9ad4f42db2263952c3fa4cd96a", "9b603343c8f7e0124b306fad9e936d03ce0759b5ebf82835de004c3702384e7f", "9e8f0f4801eab024618684281b9d5f990f963bb1b872cf84e341fc5d73283fb7", "ae8def9d138c5a359a18a56ad8564be8aaaaa1e7bf1b53c79730316c3ae7d954", "bff502c356e7c9fb32d517a6202a73df3f6afae7ff6ff7f828be885e1dfaeeb7", "dfd3b1125f8a72d89a1b7ee6d42c71da43cf5225b0f40f215e6224ef08f4deff", "e5ec7aa1371234ef7bca03392ede14484f3c8a368841a2b0ed6bbceff68bef44", "e882223bf038c54cf7428f04ebee170647a7e348635f4057e60d2b356311c488"]
+tensorflow-gpu = ["0c8ced99e74f10c66604fa61e40cb8cfbc073e89eb95c061626d3535958142b5", "0e99c8d09b85f7ab5b9006f3065a705aec75ed8375c9c3f8ab743ba19e461666", "7785f1dd37a2f657d95e5a1f885789d38cd369b53c736dd0353c5446fbede8f9", "8ad4488117a804d8ac5904b54149142e50b6ed6d50f5ffcf95dd6c165b046764", "a456313801278c170cb850e7ef92658dd6201bf57876998a0ab493ea463dba33", "a45d1749ca20bc2cb3431e85f4c7b623f68d1e08a00c56fb98b6a3d0410401dd", "b091c93d85f73f6a95be1a2dc63ace6e8e74039f637828981a99949d6b3ab553", "b1c5de846810e14902c73422a2a52896c4bd3391b2c9e3fc4f4fe067f3746f01", "e8f4235b66ec25b96ae162ab9022943a07f7997141331df51bf582bf3e0ca7d1"]
 termcolor = ["1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"]
 terminado = ["d9d012de63acb8223ac969c17c3043337c2fcfd28f3aea1ee429b345d01ef460", "de08e141f83c3a0798b050ecb097ab6259c3f0331b2f7b7750c9075ced2c20c2"]
 testpath = ["46c89ebb683f473ffe2aab0ed9f12581d4d078308a3cb3765d79c6b2317b0109", "b694b3d9288dbd81685c5d2e7140b81365d46c29f5db4bc659de5aa6b98780f8"]
 text-unidecode = ["5a1375bb2ba7968740508ae38d92e1f889a0832913cb1c447d5e2046061a396d", "801e38bd550b943563660a91de8d4b6fa5df60a542be9093f7abf819f86050cc"]
+tf-estimator-nightly = ["99818ef0c70c23ce6417085c960ca2d275db9bd248abeb63da1b4f138aa00cf0"]
 toml = ["229f81c57791a41d65e399fc06bf0848bab550a9dfd5ed66df18ce5f05e73d5c", "235682dd292d5899d361a811df37e04a8828a5b1da3115886b73cf81ebc9100e", "f1db651f9657708513243e61e6cc67d101a39bad662eaa9b5546f789338e07a3"]
 tornado = ["349884248c36801afa19e342a77cc4458caca694b0eda633f5878e458a44cb2c", "398e0d35e086ba38a0427c3b37f4337327231942e731edaa6e9fd1865bbd6f60", "4e73ef678b1a859f0cb29e1d895526a20ea64b5ffd510a2307b5998c7df24281", "559bce3d31484b665259f50cd94c5c28b961b09315ccd838f284687245f416e5", "abbe53a39734ef4aba061fca54e30c6b4639d3e1f59653f0da37a0003de148c7", "c845db36ba616912074c5b1ee897f8e0124df269468f25e4fe21fe72f6edd7a9", "c9399267c926a4e7c418baa5cbe91c7d1cf362d505a1ef898fde44a07c9dd8a5"]
 tqdm = ["14a285392c32b6f8222ecfbcd217838f88e11630affe9006cd0e94c7eff3cb61", "25d4c0ea02a305a688e7e9c2cdc8f862f989ef2a4701ab28ee963295f5b109ab"]

@@ -9,14 +9,14 @@ python = "^3.6"
 jupyter = "^1.0"
 black = {version = "^18.3-alpha.0",allows-prereleases = true}
 keras = "^2.2"
-tensorflow = "^1.14"
 matplotlib = "^3.1"
 pydot = "^1.4"
 pandas = "^0.24.2"
 gpustats = "^0.0.1"
-tensorflow-gpu = "^1.14"
 mlflow = "^1.0"
 kaggle = "^1.5"
+tensorflow = "=2.0.0-beta1"
+tensorflow-gpu = "=2.0.0-beta1"
 
 [tool.poetry.dev-dependencies]
 

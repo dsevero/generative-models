@@ -9,4 +9,7 @@ entry_points:
       dropout_rate: {type: float, default: 0.5}
       architecture: {type: string, default: "DenseCNN"}
       submit: {type: string, default: "no"}
-    command: "python main.py --batch-size {batch_size} --epochs {epochs} --dropout-rate {dropout_rate} --architecture {architecture} --submit {submit}"
+      conv2d_filters: {type: int, default: 32}
+      dense_units: {type: int, default: 256}
+      validation_size: {type: int, default: 10000}
+    command: python main.py --batch-size {batch_size} --epochs {epochs} --dropout-rate {dropout_rate} --architecture {architecture} --submit {submit} --conv2d_filters {conv2d_filters} --dense_units {dense_units} --validation_size {validation_size}

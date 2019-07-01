@@ -1,5 +1,5 @@
-from keras.models import Sequential
-from keras.layers import (
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import (
     Conv2D,
     MaxPooling2D,
     Dense,
@@ -8,7 +8,7 @@ from keras.layers import (
     BatchNormalization,
     Dropout,
 )
-from keras.datasets import mnist
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from IPython.display import display
 from mlflow.keras import log_model
 from contextlib import redirect_stdout
@@ -36,23 +36,27 @@ def get_model(input_shape, **kwargs):
         return Sequential(
             [
                 Conv2D(
-                    filters=32,
-                    kernel_size=(3, 3),
+                    filters=kwargs["conv2d_filters"],
+                    kernel_size=(5, 5),
                     activation="relu",
                     data_format="channels_first",
                     input_shape=input_shape,
+                    padding="same",
                 ),
-                MaxPooling2D(pool_size=(2, 2)),
+                MaxPooling2D(pool_size=(2, 2), padding="same"),
+                Dropout(kwargs["dropout_rate"]),
                 Conv2D(
-                    filters=32,
-                    kernel_size=(3, 3),
+                    filters=kwargs["conv2d_filters"],
+                    kernel_size=(5, 5),
                     activation="relu",
                     data_format="channels_first",
                     input_shape=input_shape,
+                    padding="same",
                 ),
-                MaxPooling2D(pool_size=(2, 2)),
+                MaxPooling2D(pool_size=(2, 2), padding="same"),
+                Dropout(kwargs["dropout_rate"]),
                 Flatten(),
-                Dense(256, activation="relu"),
+                Dense(kwargs["dense_units"], activation="relu"),
                 Dropout(kwargs["dropout_rate"]),
                 BatchNormalization(),
                 Dense(10, activation="softmax"),
@@ -62,15 +66,16 @@ def get_model(input_shape, **kwargs):
         raise NotImplementedError()
 
 
-def load_data(validation_size=10000):
+def load_data(**kwargs):
+    validation_size = kwargs['validation_size']
     EXPERIMENT_ROOT = Path(__file__).resolve().parents[2]
     data = pd.read_csv(EXPERIMENT_ROOT / "data/train.csv")
     test = pd.read_csv(EXPERIMENT_ROOT / "data/test.csv")
     y = data.pop("label").values
     x = data.values
 
-    y_train, y_valid = np.split(y, [validation_size])
-    x_train, x_valid = np.split(x, [validation_size])
+    y_valid, y_train = np.split(y, [validation_size])
+    x_valid, x_train = np.split(x, [validation_size])
 
     x_train, x_valid, x_test = reshape_channel_first(
         x_train / 255.0, x_valid / 255.0, test.values / 255.0
@@ -80,16 +85,38 @@ def load_data(validation_size=10000):
     return (x_train, y_train), (x_valid, y_valid), (x_test, None)
 
 
+def data_augmentation():
+    datagen = ImageDataGenerator(
+        data_format="channels_first",
+        featurewise_center=False,  # set input mean to 0 over the dataset
+        samplewise_center=False,  # set each sample mean to 0
+        featurewise_std_normalization=False,  # divide inputs by std of the dataset
+        samplewise_std_normalization=False,  # divide each input by its std
+        zca_whitening=False,  # apply ZCA whitening
+        rotation_range=10,  # randomly rotate images in the range (degrees, 0 to 180)
+        zoom_range=0.1,  # Randomly zoom image
+        width_shift_range=0.1,  # randomly shift images horizontally (fraction of total width)
+        height_shift_range=0.1,  # randomly shift images vertically (fraction of total height)
+        horizontal_flip=False,  # randomly flip images
+        vertical_flip=False,
+    )  # randomly flip images
+
+    return datagen
+
+
 @click.command()
 @click.option("--batch-size", type=int)
 @click.option("--epochs", type=int)
 @click.option("--dropout-rate", type=float)
 @click.option("--architecture", type=str)
-@click.option("--submit", type=str, default="no")
+@click.option("--submit", type=str)
+@click.option("--conv2d_filters", type=int)
+@click.option("--dense_units", type=int)
+@click.option("--validation_size", type=int)
 def main(**kwargs):
 
     # The data, split between train and test sets:
-    (x_train, y_train), (x_valid, y_valid), (x_test, _) = load_data()
+    (x_train, y_train), (x_valid, y_valid), (x_test, _) = load_data(**kwargs)
     input_shape = x_train[0].shape
 
     print("type\t\t", x_train.dtype)
@@ -98,10 +125,13 @@ def main(**kwargs):
     print("y_train.shape\t", y_train.shape)
     print("y_valid.shape\t", y_valid.shape)
 
+    datagen = data_augmentation()
+    datagen.fit(x_train)
+
     model = get_model(input_shape, **kwargs)
 
     model.compile(
-        optimizer="adam",
+        optimizer="rmsprop",
         # like categorical_crossentropy but for
         # integer labels instead of one-hot encoded
         loss="sparse_categorical_crossentropy",
@@ -110,18 +140,19 @@ def main(**kwargs):
 
     save_model_summary(model)
 
-    history = model.fit(
-        x_train,
-        y_train,
+    history = model.fit_generator(
+        datagen.flow(x_train, y_train, batch_size=kwargs["batch_size"]),
         validation_data=(x_valid, y_valid),
-        batch_size=kwargs["batch_size"],
+        steps_per_epoch=x_train.shape[0] // kwargs["batch_size"],
         epochs=kwargs["epochs"],
         verbose=1,
     )
 
     with mlflow.start_run() as run:
         mlflow.log_artifact("summary.txt", "model")
-        for metric, values in history.history.items():
+        metrics = history.history
+        metrics["emp_gen_loss"] = np.array(metrics["val_loss"]) - np.array(metrics["loss"])
+        for metric, values in metrics.items():
             for epoch, value in enumerate(values):
                 mlflow.log_metric(metric, value, epoch)
 
@@ -134,7 +165,7 @@ def main(**kwargs):
             mlflow.log_artifact("MNIST-DenseCNN.csv", "kaggle")
             message = f"mlflow.run_id: {run.info.run_id}"
             submission_data = kaggle.api.competition_submit(
-                    file_name="MNIST-DenseCNN.csv", message=message, competition="digit-recognizer"
+                file_name="MNIST-DenseCNN.csv", message=message, competition="digit-recognizer"
             )
 
 

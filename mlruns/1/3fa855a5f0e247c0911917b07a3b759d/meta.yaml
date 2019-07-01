@@ -1,0 +1,15 @@
+artifact_uri: file:///home/care3778/generative-models/mlruns/1/3fa855a5f0e247c0911917b07a3b759d/artifacts
+end_time: 1561940882689
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: deleted
+name: ''
+run_id: 3fa855a5f0e247c0911917b07a3b759d
+run_uuid: 3fa855a5f0e247c0911917b07a3b759d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1561940866514
+status: 3
+tags: []
+user_id: care3778
