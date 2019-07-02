@@ -17,6 +17,7 @@ mlflow = "^1.0"
 kaggle = "^1.5"
 tensorflow = "=2.0.0-beta1"
 tensorflow-gpu = "=2.0.0-beta1"
+coconut = "^1.4"
 
 [tool.poetry.dev-dependencies]
 
