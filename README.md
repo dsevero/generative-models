@@ -40,6 +40,8 @@ Repository for self-teaching of Generative Models and its applications.
 # Readables and Watchables
 
 ## Introductory
+> [UAI 2017 Tutorial: Shakir Mohamed & Danilo Rezende :brazil:](https://www.youtube.com/watch?v=JrO5fSskISY)
+
 > https://openai.com/blog/generative-models/
 
 > [Stanford - Lecture 13 | Generative Models](https://www.youtube.com/watch?v=5WoItGTWV54)
