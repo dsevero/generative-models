@@ -8,6 +8,5 @@ dependencies:
   - tensorflow-gpu
   - keras
   - pip
-  - coconut
   - pip:
     - mlflow

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/care3778/generative-models/mlruns/0/e0b8f7d176474708beea5e7c27cc4dcc/artifacts
+end_time: 1563002186973
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: e0b8f7d176474708beea5e7c27cc4dcc
+run_uuid: e0b8f7d176474708beea5e7c27cc4dcc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1563001896168
+status: 4
+tags: []
+user_id: severo
