@@ -49,9 +49,13 @@ Repository for self-teaching of Generative Models and its applications.
 
 ## Variational Inference
 > [Dustin Tran and Alp Kucukelbir and Adji B. Dieng and Maja Rudolph and Dawen Liang and David M. Blei, **Edward: A library for probabilistic modeling, inference, and criticism**](http://edwardlib.org/tutorials/)
+
 > [Martin J. Wainwright1 and Michael I. Jordan2, **Graphical Models, Exponential Families, and Variational Inference**](https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf)
+
 > [Andrew Miller's Blog](http://andymiller.github.io/blog/)
+
 > [ Eric P. Xing, **Variational inference II**](https://www.cs.cmu.edu/~epxing/Class/10708-15/notes/10708_scribe_lecture13.pdf)
+
 > [Eric Lang, **A Beginner's Guide to Variational Methods: Mean-Field Approximation**](https://blog.evjang.com/2016/08/variational-bayes.html)
 
 ## Generative Adversarial Networks (GANs)
