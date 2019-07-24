@@ -7,19 +7,18 @@ Repository for self-teaching of Generative Models and its applications.
    * [Courses](#courses)
    * [Readables and Watchables](#readables-and-watchables)
       * [Introductory](#introductory)
-      * [Explicit Density](#explicit-density)
-      * [Implicit Density](#implicit-density)
-         * [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
-            * [2019](#2019)
-            * [2016](#2016)
-            * [2014](#2014)
+      * [Variational Inference](#variational-inference)
+      * [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
+         * [2019](#2019)
+         * [2016](#2016)
+         * [2014](#2014)
       * [Applications](#applications)
          * [Bioinformatics](#bioinformatics)
          * [Healthcare](#healthcare)
          * [Reinforcement Learning](#reinforcement-learning)
-   * [Related repos.](#related-repos)
+   * [Related repos &amp; tutorials.](#related-repos--tutorials)
 
-<!-- Added by: severo, at: Fri May 24 01:19:58 -03 2019 -->
+<!-- Added by: severo, at: Wed Jul 24 14:01:25 -03 2019 -->
 
 <!--te-->
 
@@ -37,6 +36,8 @@ Repository for self-teaching of Generative Models and its applications.
 ```
 # Courses
 > [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)
+> [CS 228 - Probabilistic Graphical Models](https://cs228.stanford.edu/)
+
 # Readables and Watchables
 
 ## Introductory
@@ -46,13 +47,18 @@ Repository for self-teaching of Generative Models and its applications.
 
 > [Stanford - Lecture 13 | Generative Models](https://www.youtube.com/watch?v=5WoItGTWV54)
 
-## Explicit Density
-## Implicit Density
-### Generative Adversarial Networks (GANs)
-#### 2019
+## Variational Inference
+> [Dustin Tran and Alp Kucukelbir and Adji B. Dieng and Maja Rudolph and Dawen Liang and David M. Blei, **Edward: A library for probabilistic modeling, inference, and criticism**](http://edwardlib.org/tutorials/)
+> [Martin J. Wainwright1 and Michael I. Jordan2, **Graphical Models, Exponential Families, and Variational Inference**](https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf)
+> [Andrew Miller's Blog](http://andymiller.github.io/blog/)
+> [ Eric P. Xing, **Variational inference II**](https://www.cs.cmu.edu/~epxing/Class/10708-15/notes/10708_scribe_lecture13.pdf)
+> [Eric Lang, **A Beginner's Guide to Variational Methods: Mean-Field Approximation**](https://blog.evjang.com/2016/08/variational-bayes.html)
+
+## Generative Adversarial Networks (GANs)
+### 2019
 > [Odena, **"Open Questions about Generative Adversarial Networks"**, Distill, 2019.](https://distill.pub/2019/gan-open-problems/)
 
-#### 2016
+### 2016
 > [Salimans, T., Goodfellow, I., Zaremba, W., Cheung, V., Radford, A., & Chen, X. (2016). **Improved techniques for training gans.** In Advances in neural information processing systems (pp. 2234-2242).](https://arxiv.org/abs/1606.03498)
 
 > [Goodfellow, I. (2016). **NIPS 2016 tutorial: Generative adversarial networks.** arXiv preprint arXiv:1701.00160.](https://arxiv.org/abs/1701.00160)
@@ -63,7 +69,7 @@ Repository for self-teaching of Generative Models and its applications.
 
 > [Introduction to GANs, NIPS 2016 | Ian Goodfellow, OpenAI](https://www.youtube.com/watch?v=9JpdAg6uMXs)
 
-#### 2014
+### 2014
 > [Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). **Generative adversarial nets.** In Advances in neural information processing systems (pp. 2672-2680).](https://arxiv.org/abs/1406.2661)
 
 ## Applications
