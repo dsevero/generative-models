@@ -58,6 +58,8 @@ Repository for self-teaching of Generative Models and its applications.
 
 > [Eric Lang, **A Beginner's Guide to Variational Methods: Mean-Field Approximation**](https://blog.evjang.com/2016/08/variational-bayes.html)
 
+> [Zhiya Zuo's Blog](https://zhiyzuo.github.io/blog/)
+
 ## Generative Adversarial Networks (GANs)
 ### 2019
 > [Odena, **"Open Questions about Generative Adversarial Networks"**, Distill, 2019.](https://distill.pub/2019/gan-open-problems/)
