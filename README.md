@@ -1,3 +1,7 @@
+<p align="center"> 
+  <img src="assets/gan-mnist.gif">
+</p>
+
 Generative Models
 ===================
 Repository for self-teaching of Generative Models and its applications.
