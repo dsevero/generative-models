@@ -103,3 +103,7 @@ Repository for self-teaching of Generative Models and its applications.
 > https://ceit.aut.ac.ir/~khalooei/tutorials/gan/
 
 > [CVPR 2018 Tutorial on GANs](https://sites.google.com/view/cvpr2018tutorialongans/)
+
+> [Keras implementations of GANs.](https://github.com/eriklindernoren/Keras-GAN)
+
+> [PyTorch implementations of GANs](https://github.com/eriklindernoren/PyTorch-GAN)
