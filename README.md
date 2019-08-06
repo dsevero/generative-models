@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="assets/gan-mnist.gif">
+  <img src="assets/gan-mnist-5.gif">
 </p>
 
 Generative Models
